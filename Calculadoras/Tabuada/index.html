@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada Avançada</title>
+  </head>
+
+  <body>
+    <h1>Tabuada Avançada</h1>
+    <div>
+      <h2>Preencha os Campos corretamente</h2>
+
+      <form>
+        <label for="startNum">De: </label>
+        <input type="number" id="startNum" value="2" step="1" />
+        <br />
+        <label for="endNum">Até: </label>
+        <input type="number" id="endNum" value="10" step="1" />
+        <br />
+        <input type="checkbox" id="showAll" />
+        <label for="showAll">Exibir todas as tabuadas</label>
+      </form>
+
+      <button onclick="tabuada()">Exibir</button>
+
+      <div id="resultado"></div>
+    </div>
+
+    <script language="JavaScript">
+      function tabuada() {
+        let startNum = parseInt(document.getElementById("startNum").value);
+        let endNum = parseInt(document.getElementById("endNum").value);
+        let showAll = document.getElementById("showAll").checked;
+        let resultado = "";
+        if (startNum && endNum) {
+          for (let i = startNum; i <= endNum; i++) {
+            resultado += `<h2>Tabuada do ${i}</h2>`;
+            for (let j = 1; j <= i; j++) {
+              resultado += `${i} x ${j} = ${i * j}`;
+              resultado += "<br>";
+            }
+            if (!showAll) {
+              break;
+            }
+          }
+
+          document.getElementById("resultado").innerHTML = resultado;
+        } else {
+          window.alert("Preencha corretamente os campos");
+        }
+      }
+    </script>
+  </body>
+</html>
