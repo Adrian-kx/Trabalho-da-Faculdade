@@ -1,0 +1,79 @@
+::selection {
+  background-color: #6c6c6c;
+  color: #f7f7f7;
+}
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+html {
+  height: 110vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #6c6c6c, #f0f0f0);
+  background-size: 100%;
+  padding-bottom: 50px;
+}
+body div {
+  background-color: #f7f7f7;
+  width: 45%;
+  height: auto;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body div form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: left;
+}
+
+div form input {
+  width: 40%;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+div button {
+  width: 30%;
+  border-radius: 25px;
+  height: 45px;
+  margin: 30px 0;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 3px 3px 10px 2px rgb(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+  background-color: #6c6c6c;
+  color: #f7f7f7;
+}
+div button:hover {
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  background-color: #f7f7f7;
+  color: #6c6c6c;
+}
+
+div #resultado {
+  width: 70%;
+}
+
+@media (max-width: 700px) {
+  div form input {
+    width: 60%;
+  }
+  body div {
+    width: 90%;
+    padding: 10px;
+  }
+  div button {
+    width: 90%;
+  }
+  div #resultado {
+    width: 90%;
+  }
+}
