@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Preço de Viajem - Adrian Kauã xavier</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <h1>Calculadora de Preço de Viagem</h1>
+    <div>
+      <h2>Preencha os Campos corretamente</h2>
+      <form>
+        <label for="nomeViagem">Nome da Viagem:</label>
+        <input type="text" id="nomeViagem" required />
+
+        <label for="kmPercorridos">Quilômetros percorridos:</label>
+        <input type="number" id="kmPercorridos" required />
+
+        <label for="litrosCombustivel">Litros de combustível gastos:</label>
+        <input type="number" id="litrosCombustivel" required />
+
+        <label for="valorLitroCombustivel"
+          >Valor do litro de combustível (R$):</label
+        >
+        <input type="number" id="valorLitroCombustivel" required />
+      </form>
+      <button type="button" onclick="CalcPrice()">Calcular</button>
+      <div id="resultado"></div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
